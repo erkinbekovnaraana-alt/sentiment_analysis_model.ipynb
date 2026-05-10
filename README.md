@@ -1,138 +1,100 @@
-# Sentiment Analysis Model — Text Classification using Machine Learning
+# Sentiment Analysis — Text Classification using Machine Learning
 
-## Overview
-
-This project implements a basic sentiment analysis model that classifies text as **positive** or **negative** using machine learning techniques.
-
-The goal is to demonstrate how natural language can be transformed into numerical features and used to train a predictive model.
+## Overview  
+This project builds a basic Natural Language Processing (NLP) model to classify text as positive or negative.  
+It demonstrates how machine learning can be applied to understand human language and opinions.
 
 ---
 
-## Problem Statement
-
-Understanding sentiment in text is a key task in natural language processing (NLP), widely used in:
-
-* customer feedback analysis
-* social media monitoring
-* product reviews
-
-This project aims to answer:
-
-* Can we automatically classify text sentiment?
-* How can text data be converted into features for machine learning?
+## Problem Statement  
+Understanding sentiment in text is essential for analyzing user feedback, reviews, and opinions.  
+This project focuses on building a simple model to automatically classify sentiment.
 
 ---
 
-## Data
-
-A small labeled dataset was created manually:
-
-* Positive examples:
-
-  * "I love this product"
-  * "This is amazing"
-  * "I am very happy"
-
-* Negative examples:
-
-  * "I hate this"
-  * "This is bad"
-  * "Very плохой продукт"
-
-Each text is labeled as:
-
-* `1` → Positive
-* `0` → Negative
+## Objective  
+Classify text data into two categories:  
+- Positive sentiment  
+- Negative sentiment  
 
 ---
 
-## Methodology
+## Dataset  
 
-### 1. Text Vectorization
-
-Text data was converted into numerical form using:
-
-* Bag-of-Words approach via `CountVectorizer`
-
-This transforms each sentence into a vector representing word frequencies.
+- Small labeled dataset of text samples  
+- Examples include positive and negative phrases  
+- Labels:  
+  - 1 = positive  
+  - 0 = negative  
 
 ---
 
-### 2. Model Training
+## Methodology  
 
-A Logistic Regression model was used to:
+### Text Processing  
+- Converted text into numerical features using **CountVectorizer**  
+- Represented text as word frequency vectors  
 
-* learn patterns between words and sentiment
-* classify unseen text
+### Model Training  
+- Applied **Logistic Regression** for classification  
+- Trained model on labeled dataset  
 
----
-
-### 3. Prediction
-
-The trained model was tested on new examples:
-
-* "I love it" → Positive
-* "This is bad" → Negative
+### Prediction  
+- Tested model on new unseen text samples  
+- Generated sentiment predictions  
 
 ---
 
-## Results
+## Results  
 
-The model successfully classified test sentences:
-
-```id="1a9x2k"
-Predictions: [1 0]
-```
-
-This shows that even a simple model can capture basic sentiment patterns.
+- Model correctly classified test inputs:  
+  - "I love it" → Positive  
+  - "This is bad" → Negative  
 
 ---
 
-## Key Insights
+## Key Insights  
 
-* Text can be effectively converted into numerical features using vectorization
-* Logistic Regression performs well on simple classification tasks
-* Even small datasets can demonstrate core NLP concepts
-
----
-
-## Tech Stack
-
-* Python
-* Pandas
-* Scikit-learn (`CountVectorizer`, `LogisticRegression`)
+- Machine learning models can effectively classify text sentiment even with simple techniques  
+- Feature extraction (vectorization) is critical for NLP tasks  
+- Logistic Regression provides a strong baseline for classification problems  
 
 ---
 
-## Limitations
+## Limitations  
 
-* Very small dataset (not suitable for real-world use)
-* Limited vocabulary understanding
-* Does not capture context or sarcasm
-
----
-
-## Future Improvements
-
-* Use larger, real-world datasets
-* Apply advanced models (e.g., Hugging Face Transformers)
-* Implement preprocessing (stemming, stopwords removal)
-* Evaluate model using accuracy, precision, recall
-* Deploy as a web app using Streamlit
+- Very small dataset  
+- Limited vocabulary  
+- Does not capture context, sarcasm, or complex language patterns  
 
 ---
 
-## Repository Structure
+## Future Improvements  
 
-```id="k2l9mn"
-sentiment-analysis/
-│
-├── sentiment_analysis_model.ipynb
-├── README.md
-```
+- Use larger, real-world datasets  
+- Apply advanced NLP models (e.g., TF-IDF, Word Embeddings)  
+- Implement deep learning models (e.g., LSTM, Transformers)  
+- Improve multilingual support  
 
 ---
 
-## 👤 Author
+## Tech Stack  
 
-Independent project demonstrating foundational skills in natural language processing and machine learning.
+- Python  
+- Pandas  
+- Scikit-learn  
+
+---
+
+## Project Value  
+
+This project demonstrates the ability to:  
+- Process and structure text data  
+- Apply machine learning to NLP problems  
+- Build and evaluate a classification model  
+
+---
+
+## Author  
+
+Data Science & Machine Learning student focused on applying AI to analyze human language and behavior
